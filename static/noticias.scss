@@ -1,0 +1,89 @@
+@import 'general';
+@import 'nav';
+
+.header{
+    position: relative;
+    height: 40vh;
+    background: $Paleta1;
+    & img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: screen;
+    }
+    & h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+.noticia{
+    position: relative;
+    padding: 2%; 
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 'decor desc';
+    margin-bottom: 3vh;
+    background-color: rgba($Paleta1, 0.1);
+}
+
+.fecha{
+    color: $Paleta1;
+}
+
+.decor{
+    grid-area: decor;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    & img{
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        padding: 0;
+        width: auto;
+        height: 100%;
+        mix-blend-mode: screen;
+        place-self: center;
+    }
+}
+
+.desc{
+    grid-area: desc;
+    background-color: white;
+    place-content: center;
+    padding: 5%;
+}
+
+
+.tit{
+    color: $Paleta2;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.subra{
+    height: 3px;
+    background: $Paleta2;
+    width: 150px;
+    margin: 7px 0 10px;
+}
+@media (max-width: 850px) {
+    .noticia{
+    grid-template-columns: 90%;
+    grid-template-rows: 40vh auto;
+    grid-template-areas: 
+     'decor'
+     'desc';
+    place-content: center;
+    }
+    .header{
+        height: 20vh;
+    }
+}

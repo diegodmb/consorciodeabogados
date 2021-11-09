@@ -1,0 +1,277 @@
+@import 'general';
+@import 'nav';
+
+.landing{
+    width: 100vw;
+    background-color: $Paleta1;
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+
+}
+.clogo{
+    width:  clamp(8rem, 13vw, 13rem);
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 10;
+}
+.titulo{
+    position: absolute;
+    color: white;
+    width: 100%;
+    top: 20vh;
+    text-align: center;
+    z-index: 10;   
+}
+
+.forma{
+    position: absolute;
+    left: -400px ;
+    top: 30%;
+}
+
+.espec{
+    position: absolute;
+    width: 100vw;
+    top: 60vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+.item{
+    color: $Paleta2;
+    width:  clamp(7rem, 20vw, 12rem);
+    height: clamp(7rem, 20vw, 12rem);
+    text-decoration: none;
+    border: 2px solid white;
+    margin: 10px;
+    font-family: $Brand;
+    position: relative;
+    z-index: 1000;
+    // font-size: clamp(0.8rem, 1.5vw,  1rem);
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    &:hover{
+        background: white;
+        color: $Paleta2;
+    
+    }
+    & a{
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        &:hover{
+            background: white;
+        }
+    }
+    & h1{
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        font-size: clamp(0.8rem, 2vw,  2rem);
+    }
+    & img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+}
+
+.derecho{
+    position: relative;
+    height: 130vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(240deg, $Paleta2 10%, $Paleta1 90%);
+    & h1{
+        display: flex;
+        position: absolute;
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        z-index: 10;
+        mix-blend-mode: screen;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        left: 10%;
+        color: rgb(168, 167, 167);
+        text-align: center;
+        z-index: 118;
+    }
+    & img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.8;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        mix-blend-mode: screen;
+    }
+
+}
+
+
+
+.formader{
+    position: absolute;
+    top: 0;
+    height: 110%;
+    left: -50px;
+    z-index: 11;
+    opacity: 0.9;
+}
+
+.formader2{
+    position: absolute;
+    left: 60%;
+    top: 55%;
+    opacity: 1;
+    z-index: 10;
+}
+
+.bottom{
+    background: white;
+    position: absolute;
+    width: 100vw;
+    top: 40vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+.desc{
+    width: 100%;
+    padding: 5%;
+    z-index: 13;
+    letter-spacing: 1px;
+    //font-size: clamp(0.8rem, 1.1vw, 2rem);
+    line-height: calc(1vw + 1rem);
+    background: $Paleta2;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & .left{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    & p{
+        padding-top: 10px;
+    }
+    & a{
+        background-color: white;
+        color: $Paleta2;
+        padding: 15px 10px;
+        text-decoration: none;
+        font-family: $Display;
+        z-index: 1000;
+        text-align: center;
+        font-size: clamp(0.7rem, 1.5vw,  1rem);
+
+    }
+
+
+}
+
+.ayuda{
+    width: 100%;
+    & h3{
+        padding: 30px;
+        color: $Paleta1;
+        font-family: $Display;
+    }
+    & ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    & li{
+        list-style: none;
+        width:  clamp(9rem, 18vw, 14rem);
+        font-family: $AMenu;
+        color: rgb(63, 60, 60);
+        padding: 20px 10px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border-radius: 10px;
+        text-align: left;
+        letter-spacing: 1px;
+        & img{
+            width: clamp(1.8rem, 3vw, 4rem);
+            padding-right: 8px;
+        }
+        & p{
+            font-size: clamp(0.8rem, 1.2vw,  1.2rem);
+        }
+    }
+        
+}
+@media (max-width: 850px) {
+    .landing{
+        height: 900px;
+    }
+    .header{
+        top: 20vh;
+        margin: 3%;
+        text-align: center;
+    }
+    .desc{
+        flex-direction: column;
+        height: 60vh;
+        & .left{
+            width: 80%;
+        }
+    }
+    .derecho{
+        height: 1200px;
+    }
+    .ayuda{
+        width: 100%;
+        padding: 0;
+     & li{
+        display: flex;
+        justify-content: left;
+        align-items: center ;
+        }
+
+    }
+    .forma{
+        top: 20%;
+    }
+    .formader{
+        left: -200px;
+    }
+    .top{
+        height: 20vh;
+    }
+    .bottom{
+        top: 20vh;
+    }
+
+}

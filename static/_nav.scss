@@ -1,0 +1,492 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    height: 15vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $Nav;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 5000;
+    transition: top 0.6s;
+    & a{
+        text-decoration: none;
+        color: $CMenu;
+    }
+
+}
+
+.logo svg{
+    width: clamp(3rem, 4vw, 4rem);
+    height: 15vh;
+}
+
+.branding{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 15vh;
+    width: 50%;
+    & img{
+        width: clamp(3rem, 5vw,  5rem) ;
+        padding-left: 5%;
+    }
+}
+
+.brand{
+    color: white;
+    font-family: $Brand;
+    padding-left: 20px;
+    font-size: clamp(1.4rem, 5vw,  2rem) ;
+    }
+
+.menu{
+    display: flex;
+    width: 55%;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $FMenu;
+    margin-right: 5%;
+    & a{
+        padding-bottom: 6px;
+        &:hover{
+            color: $HMenu
+        }
+    }
+
+}
+/* Underline From Right */
+.hvr-underline-from-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    background: $HMenu;
+    height: 4px;
+    transition-property: left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-right:hover:before, .hvr-underline-from-right:focus:before, .hvr-underline-from-right:active:before {
+    left: 0;
+  }
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .burger{
+    display: none;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+
+.burger div{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: $Paleta4;
+    transition: all 0.5s ease;
+}
+.drop-content {
+    display: none;
+    //opacity: 0;
+    position: absolute;
+    padding: 15px 25px;
+    padding-top: 5vh;
+    background-color: transparent;
+    min-width: 150px;
+    & a {
+        float: none;
+        color: $Paleta1;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0%;
+            opacity: 0;
+            height: 0px;
+            background-color: $Nav;
+        }
+        &:hover{
+            color: $Paleta1;
+        }
+        &:hover::before{
+            width: 0%;
+            opacity: 1;
+            height: 1.8px;
+            transition: height 0.3s ease-out, opacity 0.3s ease-out, width 0.3s ease-out;
+        }
+    }    
+}  
+
+.drop-content-int{
+    background: white;
+    padding-top: 16vh;
+    opacity: 0.9;
+    position: absolute;
+    padding: 15px 25px;
+    min-width: 160px;
+    border-radius: 0 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+
+}
+
+.drop:hover + .drop-content {
+    display: block;
+    //opacity: 1;
+    //transition: 0.3s opacity ease-in-out;
+}
+
+
+.drop-content:hover {
+    display: block;
+    
+}
+
+
+.drop:active + .drop-content {
+    display: block;
+}
+
+.drop-content:active {
+    display: block;  
+    
+}
+
+.drop-content-int a{
+    display: flex;
+    align-self: center;
+    padding: 5px;
+    &:hover{
+        background:$Paleta1;
+        color: white;
+
+    }
+}
+
+.divisor{
+    margin: 10px 15px;
+    height: 1px;
+    margin: 9px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    background-color: $Paleta1;
+}
+
+@keyframes navlinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+footer{
+    position: relative;
+    margin-top: 150px;
+    background: $Paleta1;
+    height: 70vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 3% 35% 60%;
+    grid-template-rows: 60% 30% 10%;
+    overflow: hidden;
+    grid-template-areas: 
+    '. brand form'
+    '. menu form'
+    '. contacto contacto';
+    & h4{
+        color: white;
+        text-align: center;
+        font-size: clamp(1rem, 1.3vw, 1.5rem);
+    }
+
+    & p{
+        color: $CMenu;
+        font-size: clamp(1rem, 1.2vw,  1.8rem);
+    }
+}
+
+.fcontacto{
+    grid-area: contacto;
+    overflow: hidden;
+    display: flex;
+    gap: 30px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    & img{
+        width: 20px;
+        padding-right: 5px;
+    }
+    & p{
+        font-size: clamp(0.8rem, 0.6vw, 0.8rem );
+        color: white;
+
+    }
+}
+
+.cont{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $CMenu;
+    &:hover{
+        color:white;
+    }
+}
+
+.fmenu{
+    transform: translateY(0, -30%);
+    grid-area: menu;
+    display: flex;
+    list-style: none;
+    padding-top: 15px;
+    align-items: flex-start;
+    z-index: 10000;
+    & a{
+        color: white;
+        font-size: clamp(0.85rem, 1vw,  1.5rem);
+        &:hover{
+            color: $HMenu
+        }
+    }
+    & ul{
+        display: flex;
+        list-style-type: none;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        font-family: $FMenu;
+
+    }
+}
+.fbranding{
+    grid-area: brand;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+    & svg{
+        width: clamp(4rem, 7vw,  7rem) ;
+    }
+}
+
+.fcall{
+    padding-top: 20px;
+    letter-spacing: 1px;
+    color: $CMenu;
+
+}
+
+.big{
+    font-size: clamp(1.6rem, 1.8vw,  2.5rem);    
+    font-family: $Display;
+    color: $CMenu;
+}
+
+.form{
+    grid-area: form;
+    display:flex;
+    flex-direction: column;
+    margin:5%;
+    padding: 30px 50px;
+    padding-bottom: 120px;
+    width: 80%;
+    border-radius: 20px;
+    & h3{
+        color: $CMenu;
+    }
+}
+
+.input{
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+form{
+
+    & label{
+        line-height: 30px;
+        color: $CMenu;
+    }
+    & input{
+        padding: 10px;
+        padding-bottom: 2px;
+        border-radius: 3px;    
+        background: transparent;
+        border: none;
+        color: $CMenu;
+        border-bottom: 2px solid white;
+        &:focus, :active{
+            border: none;
+            border-bottom: 3px solid $Paleta2;
+            outline: thin;
+            }
+    
+        }
+    & label{
+        padding-right: 5px;
+    }
+    & textarea{
+        padding: 10px;
+        padding-bottom: 2px;
+        border-radius: 3px;
+        color: $CMenu;    
+        background: transparent;
+        border: 2px solid white;
+        &:focus, :active{
+            border: 2px solid $Paleta2;
+            outline: thin;
+            }
+    }
+}
+
+.fnombre{
+    width: 500px;
+}
+
+.ftext{
+    display: flex;
+    flex-direction: column;
+    color: $CMenu;
+}
+
+.btn{
+    background: white;
+    color: $Paleta1;
+    padding: 15px 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-family: $Display;
+    transition: background-color 0.5s;
+
+    &:hover{
+        background-color: darken($Paleta2, 0.5);
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+.formaf{
+    opacity: 0.8;
+    margin-top: 70px;
+    margin-left: -350px;
+}
+@media (max-width: 900px) {
+    .burger{
+        display: block;
+        position: absolute;
+        right: 5%;
+    }
+    .menu{
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        top: 0;
+        width: 100%;
+        background-color: $Paleta1;
+        clip-path: circle(100px at 90% -20%);
+        transition: all 1s ease-out;
+        &.open{
+            clip-path: circle(1000px at 90% -20%);
+            pointer-events: all;
+        }
+    }
+
+    .branding{
+        width: 80%;
+    }
+
+    footer{
+        height: auto;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        '. brand .'
+        '. menu .'
+        '. form .'
+        '. contacto .';
+
+    }
+
+
+    .form{
+        padding: 20px 0;
+    }
+
+    .input{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    
+    }
+
+    .fmenu ul{
+        flex-direction: column;
+        & li{
+        padding: 10px 0;
+        }
+    }
+
+    .iinput{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    
+    .formaf{
+        display: none;
+    }
+
+}

@@ -1,0 +1,264 @@
+@import 'general';
+@import 'nav';
+
+//Blog Page
+
+main{
+    width: 100vw;
+}
+.blog{
+    position: relative;
+    width: 100vw;
+    top: 15vh;
+    display: flex;
+    justify-content: left;
+    flex-flow: row wrap;
+    & a{
+        text-decoration: none;
+    }
+    & img{
+        object-fit: cover;
+    }
+}
+
+.post{
+    display: flex;
+    margin: 3%;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 25vw;
+}
+.decor{
+    width: 25vw;
+    height: 40vh;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.div{
+    background: url(img/blog1a.jpg), linear-gradient(240deg, $Paleta2 10%, $Paleta1 90%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+.cust{
+    background: url(img/blog2.jpg), linear-gradient(240deg, $Paleta1 15%, $Paleta2 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+
+.lab{
+    background: url(img/blog3.jpg), linear-gradient(240deg, $Paleta1 15%, $Paleta2 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+
+.desp{
+    background: url(img/blog4.jpg), linear-gradient(240deg, $Paleta1 15%, $Paleta2 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+
+.toptit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 0 2%;
+    & p{
+        font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+        color: $Paleta1;
+        font-style: italic;
+        font-family: $AMenu;
+    }
+}
+
+.tit{
+    & a{
+        text-decoration: none;
+    }
+    & h3{
+        font-size: clamp(1rem, 1.5vw, 1.6rem);
+        color:$Paleta1;
+        letter-spacing: 1px;
+        padding-bottom: 3%;
+    }
+}
+
+.res{
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    text-align: justify;
+}
+    
+//Blog Post
+.blogpost{
+    display: grid;
+    position: relative;
+    top: 15vh;
+    justify-content: center;
+    grid-template-columns: 45% 20% 35%;
+    grid-template-areas: 
+    "headerpost decorpost decorpost"
+    "respost decorpost decorpost"
+    "textpost textpost extra";
+}  
+.headerpost{
+    grid-area: headerpost;
+    overflow: hidden;
+    padding: 5%;
+    & h1{
+        position: relative;
+        color: $Paleta1;
+        top: 20%;
+        padding-bottom: min(30px);
+        font-size: clamp(1.5rem, 3vw, 4rem);
+    }
+    & h3{
+        font-size: clamp(0.9rem, 1.3vw,  1.3rem);
+
+    }
+}
+
+.decorpost{
+    grid-area: decorpost;
+    background:  linear-gradient(240deg, $Paleta1 10%, $Paleta2 90%);
+    & img{
+        object-fit: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: screen;
+    }
+}
+
+.respost{
+    grid-area: respost;
+    font-style: italic;
+    padding: 0% 5%;
+    text-align: left;
+    line-height: 30px;
+    & p{
+        font-size: clamp(0.9rem, 1.3vw,  1.3rem);
+    }
+}
+
+.textpost{
+    grid-area: textpost;
+    padding: 5%;
+    & h3{
+        color: $Paleta2;
+        padding: 2% 0;
+        font-size: clamp(1rem, 1.5vw,  1.5rem);
+
+    }
+    & p{
+        letter-spacing: 0.5px;
+        text-align: justify;
+        line-height: 30px;
+        font-size: clamp(0.9rem, 1.2vw,  1.1rem);
+ 
+    }
+}
+
+.extra{
+    grid-area: extra;
+    margin: 20% 10%;
+}
+.venta{
+    padding: 5% 5%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background: url(img/back4.jpg), $Paleta1;
+    //background: $Color3c;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: hard-light;
+    box-shadow: $Shadow;
+    border-radius: 0 15px;
+    & img{
+        margin-top: 50px;
+        width: 80px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        padding-bottom: 10px;
+    }
+    & h3{
+        letter-spacing: 2px;
+        font-family: $Brand;
+        text-align: center;
+        color: white;
+        font-family: $Display;
+        //border-radius: 10px;
+        //background: rgba($Paleta2, 0.5);
+        //padding: 3px;
+    }
+    & a{
+        margin-top: 20px;
+        padding: 20px 30px;
+        text-align: center;
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+        background: $Paleta2;
+        text-decoration: none;
+        color: white;
+        margin-left: 50%;
+        letter-spacing: 3px;
+        transform: translateX(-50%);
+        margin-bottom: 50px;
+    }
+}
+
+.bold{
+    font-weight: bold;
+    color: $Paleta1;
+}
+
+footer{
+    
+}
+@media (max-width: 900px) {
+    .post{
+        width: 43vw;
+    }
+
+    .decor{
+        width: 43vw;
+    }
+    .blog{
+        justify-content: center;
+    }
+
+    .blogpost{
+        grid-template-columns: 100%;
+        grid-template-rows: 30vh;
+        grid-template-areas: 
+        "decorpost"
+        "headerpost"
+        "respost"
+        "extra"
+        "textpost";
+        }
+    .headerpost{
+        & h1{
+            margin-bottom: 8%;
+        }
+    }
+    
+    .textpost{
+    padding: 5%;
+}
+}
+
+@media (max-width: 670px) {
+    .post{
+        width: 80vw;
+    }
+
+    .decor{
+        width: 80vw;
+    }
+
+}

@@ -1,0 +1,446 @@
+@import 'general';
+@import 'nav';
+
+
+.landing{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.blend-custom1{
+    position: absolute;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+}
+
+
+.border {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    top: 10vh;
+
+}
+.blend{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: screen;
+    filter: invert(0.5px);
+}
+
+
+.resaltar {
+    //border-bottom: 5px solid $Paleta2; 
+    width: 100%;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        height: 5px;
+        margin: 5px 0 0;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.75s;
+        background-color: rgba($Paleta2, 5%);
+      }
+    }  
+
+
+.forma{
+    position: absolute;
+    top: 30%;
+    left: -330px;
+    z-index: 5;
+    opacity: 0.6;
+}
+
+.forma2{
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    z-index: 5;
+    opacity: 0.6;
+}
+
+.promo{
+    position: absolute;
+    top: 60%;
+    left: 73%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    width: clamp(20rem, 50vw,  45rem);
+    & h1{
+        font-family: $Brand;
+        color: white;
+        line-height: calc(2vw+0.2rem);
+        width: 100%;
+    }
+    & p{
+        margin-top: 10px;
+        color: white;
+        padding: 10px 0;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        //font-size: clamp(1rem, 1.5vw,  1.5rem);
+        line-height: calc(1.5vw + 1rem);
+        font-family: $AMenu;
+    }
+    & a{
+        margin-top: 20px;
+        padding: 20px 30px;
+        border-radius: 10px;
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+        text-decoration: none;
+        color: white;
+        width: 30%;
+    }
+}
+
+.banner1{
+    background-color: $Paleta2;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h1{
+        color:white;
+    }
+}
+
+.page2{
+    height: 90vh;
+    width: 100vw;
+    position: relative;
+    background-color: $Paleta2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+    z-index: 1000;
+    & h1{
+        font-family: $Brand;
+        font-size: clamp(1.2rem, 3vw,  2.5rem);
+        line-height: calc(4vw+0.5rem);
+        width: 70%;
+    }
+    & p{
+        width: 70%;
+        margin: 20px 0;
+        font-family: $AMenu;
+        letter-spacing: 1.5px;
+        line-height: calc(1.3vw + 1rem);
+        //font-size: clamp(0.8rem, 1.5vw,  1rem);
+
+    }
+    & a{
+        background-color: white;
+        color: $Paleta2;
+        padding: 20px 15px;
+        text-decoration: none;
+        font-family: $Display;
+        z-index: 1000;
+        font-size: clamp(0.8rem, 1.5vw,  1rem);
+
+    }
+
+}
+.formap2{
+    position: absolute;
+    left: 70%;
+    top: 50%;
+}
+
+.margen{
+    height: 10vh; 
+    bottom: 0;
+    background-color: $Paleta1;
+    position: absolute;
+}
+
+.page4{
+    position: relative;
+    height: 110vh;
+    width: 100vw;
+    background: $Paleta1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    & img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    & .forma{
+        position: absolute;
+        top: -200px;
+        left: -300px;
+        opacity: 0.8;
+    }
+    & .titulo{
+        position: absolute;
+        display: flex;
+        text-align: center;
+        top: 10vh;
+        z-index: 10;
+        //text-shadow: 1px 1px 1px #000;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);       
+    }
+    & .venta{
+        position: absolute;
+        top: 25vh;
+        z-index: 10;
+        font-family: $AMenu;
+        letter-spacing: 1.5px;
+        line-height: calc(1.1vw + 1rem);
+        font-size: clamp(0.8rem, 1.5vw,  1rem);
+        background-color: rgba(20, 166, 98, 0.5);
+        color: white;
+        padding: 6% 8%;
+        width: clamp(17rem, 45vw, 45rem);
+        & p{
+            padding-top: 15px;
+        }
+
+   }
+
+}
+
+//Page4
+
+.especializ{
+    width: 100vw;
+    background-color: $Paleta1;
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+
+}
+.clogo{
+    width:  clamp(8rem, 13vw, 13rem);
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 10;
+}
+.titulo{
+    position: absolute;
+    color: white;
+    width: 95%;
+    top: 20vh;
+    text-align: right;
+    z-index: 10;   
+}
+
+.formaesp{
+    position: absolute;
+    left: -400px ;
+    top: 30%;
+}
+
+.espec{
+    position: absolute;
+    width: 100vw;
+    top: 60vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+.item{
+    color: $Paleta2;
+    width:  clamp(7rem, 20vw, 12rem);
+    height: clamp(7rem, 20vw, 12rem);
+    text-decoration: none;
+    border: 2px solid white;
+    margin: 10px;
+    font-family: $Display;
+    position: relative;
+    z-index: 1000;
+    // font-size: clamp(0.8rem, 1.5vw,  1rem);
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    &:hover{
+        background: white;
+        color: $Paleta2;
+    
+    }
+    & a{
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        &:hover{
+            background: white;
+        }
+    }
+    & h1{
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        font-size: clamp(0.8rem, 2vw,  2rem);
+    }
+    & img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+}
+
+
+//FAQ
+
+.page5{
+    margin: 0;
+    & .header2{
+        margin: 40px 0;
+        background-color: $Paleta1;
+        height: 20vh;
+        display: grid;
+        width: 100vw;
+        place-content: center;
+        color: white;
+        font-weight: lighter;
+        letter-spacing: 2px;
+    }
+}
+
+
+.chk{
+    display: none;
+}
+
+.col {
+    flex:1;
+    display: grid;
+    justify-items: center;
+}
+/* Accordion styles */
+.tabs {
+    display: grid;
+    place-content: center;
+    width: 70%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba($Paleta1,0.1);
+    padding: 20px 40px 60px;
+    box-shadow: 0 4px 4px -2px rgba($Paleta2,0.5);
+}
+.tab {
+    margin: 10px 0;
+    width: 100%;
+    font-family: $Brand;
+    color: white;
+    font-weight: bold;
+    background: $Paleta2;
+    overflow: hidden;
+    border-radius: 5px;
+    &-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        cursor: pointer;
+    /* Icon */
+    &:hover {
+        background: darken($Paleta2, 10%);
+        color: white;
+        letter-spacing: 1px;
+        transition: letter-spacing 1s;
+    }
+  
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all 0.5s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: $Paleta1;
+    background: whitesmoke;
+    font-weight: normal;
+    transition: all 0.5s;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $Paleta2;
+    cursor: pointer;
+    &:hover {
+      background: darken($Paleta2, 10%);
+    }
+  }
+}
+
+// :checked
+input:checked {
+  + .tab-label {
+    background: darken($Paleta2, 10%);
+    color: white;
+    letter-spacing: 1px;
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}
+
+
+@media (max-width: 850px) {
+    .border{
+        width: 100%;
+        height: 40%;
+        top: 15vh;
+    }
+
+    .promo{
+        left: 50%;
+        top: 75%;
+    }
+    .page2{
+        height: 100vh;
+    & h1, p{
+        width: 80%;
+        }
+    }
+    .page4{
+        height: 140vh;
+    }
+    .branding{
+        margin-left: 7%;
+    }
+    .forma{
+        display: none;
+    }
+}
