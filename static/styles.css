@@ -16,7 +16,7 @@ h1 {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: clamp(1.3rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 2.5vw, 3rem);
   text-align: left;
 }
 
@@ -829,7 +829,9 @@ form textarea:focus, form textarea :active {
   font-family: "Nunito", sans-serif;
   color: white;
   line-height: calc(2vw+0.2rem);
-  width: 100%;
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
 }
 
 .promo p {
@@ -840,6 +842,8 @@ form textarea:focus, form textarea :active {
   letter-spacing: 2px;
   line-height: calc(1.5vw + 1rem);
   font-family: "Poppins", sans-serif;
+  width: 90%;
+  margin: auto;
 }
 
 .promo a {

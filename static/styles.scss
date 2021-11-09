@@ -82,7 +82,9 @@
         font-family: $Brand;
         color: white;
         line-height: calc(2vw+0.2rem);
-        width: 100%;
+        padding-top: 30px;
+        width: 90%;
+        margin: auto;
     }
     & p{
         margin-top: 10px;
@@ -93,6 +95,9 @@
         //font-size: clamp(1rem, 1.5vw,  1.5rem);
         line-height: calc(1.5vw + 1rem);
         font-family: $AMenu;
+        width: 90%;
+        margin: auto;
+
     }
     & a{
         margin-top: 20px;
