@@ -13,11 +13,14 @@ h1 {
 
 .titulo {
   font-family: "Nunito", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: clamp(1.3rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 2.5vw, 3rem);
   text-align: left;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 p {
@@ -700,6 +703,7 @@ form textarea:focus, form textarea :active {
   }
   .branding {
     width: 80%;
+    margin-left: 5%;
   }
   footer {
     height: auto;
@@ -767,13 +771,11 @@ form textarea:focus, form textarea :active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  margin-left: 5%;
 }
 
 .header h1 {
@@ -796,6 +798,7 @@ form textarea:focus, form textarea :active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: justify;
 }
 
 .decor {
@@ -843,10 +846,6 @@ form textarea:focus, form textarea :active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 95vw;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
   color: #1c58a6;
 }
 
@@ -954,6 +953,10 @@ form textarea:focus, form textarea :active {
   color: #1c58a6;
   font-size: clamp(1.1rem, 1.4vw, 1.4rem);
   letter-spacing: 1px;
+}
+
+.valor p {
+  text-align: justify;
 }
 
 .valor:nth-child(3) {

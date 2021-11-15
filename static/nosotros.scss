@@ -22,9 +22,9 @@
     width: 95vw;
     height: 35vh;
     display: flex;
-    justify-content: right;
     align-items: center;
     overflow: hidden;
+    margin-left: 5%;
     & h1{
         color: $Paleta1;
     }
@@ -39,6 +39,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    text-align: justify;
 }
 
 .decor{
@@ -77,8 +78,6 @@
 .titulo {
     padding-top: 6%;
     display: flex;
-    width: 95vw;
-    justify-content: right;
     color: $Paleta1;
 }
 
@@ -154,6 +153,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+
     & h3{
         color: $Paleta1;
         font-size: clamp(1.1rem, 1.4vw,  1.4rem);
@@ -161,6 +161,7 @@
     }
     & p{
 //        font-size: clamp(0.9rem, 1.2vw,  1.1rem);
+    text-align: justify;
     }
     &:nth-child(3){
         flex-flow: row-reverse wrap;

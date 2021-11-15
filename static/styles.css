@@ -700,6 +700,7 @@ form textarea:focus, form textarea :active {
   }
   .branding {
     width: 80%;
+    margin-left: 5%;
   }
   footer {
     height: auto;

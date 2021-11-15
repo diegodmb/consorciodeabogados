@@ -13,11 +13,14 @@ h1 {
 
 .titulo {
   font-family: "Nunito", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: clamp(1.3rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 2.5vw, 3rem);
   text-align: left;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 p {
@@ -700,6 +703,7 @@ form textarea:focus, form textarea :active {
   }
   .branding {
     width: 80%;
+    margin-left: 5%;
   }
   footer {
     height: auto;
@@ -835,8 +839,8 @@ li img {
 }
 
 .email {
-  font-size: 15px;
-  letter-spacing: 1.5px;
+  font-size: clamp(0.7rem, 1.3vw, 1.3rem);
+  letter-spacing: 1px;
 }
 
 .lics {

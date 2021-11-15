@@ -16,7 +16,7 @@ h1 {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: clamp(1.3rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 2.5vw, 3rem);
   text-align: left;
 }
 
@@ -700,6 +700,7 @@ form textarea:focus, form textarea :active {
   }
   .branding {
     width: 80%;
+    margin-left: 5%;
   }
   footer {
     height: auto;
