@@ -27,6 +27,16 @@ window.onscroll = function() {
 prevScrollPos = currentScrollPos;
 }
 
+function esPar(num) { return num % 2;}
+const fecha = new Date(Date.now());
+console.log(esPar(fecha.getDay()));
+tel = document.getElementById('tel');
+if (esPar(fecha.getDay())==0){
+    tel.innerHTML = '998 139 8267';
+}
+else{
+    tel.innerHTML = '998 865 5093';
+}
 
 //let height;
 //var main = document.querySelector('main');

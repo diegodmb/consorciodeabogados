@@ -13,11 +13,14 @@ h1 {
 
 .titulo {
   font-family: "Nunito", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: clamp(1.3rem, 2.5vw, 3rem);
   text-align: left;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 p {
