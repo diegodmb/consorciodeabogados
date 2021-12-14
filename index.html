@@ -11,6 +11,22 @@
     <link rel="icon" href="static/img/Icon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="author" content="Diego Alvarez">
+    <meta name="description"
+        content="En Consorcio de Abogados te ofrecemos asesoría y representación legal de calidad. 
+        Somos especalistas en Derecho Familiar, Derecho Civil, Derecho Laboral y Derecho Penal">
+    <meta name="keywords"
+        content="Consorcio de Abogados, Abogados en Cancun, Derecho Familiar,Abogado de Divorcio en Cancún,Abogado de Divorcio, Abogado Laboral en Cancún, Necesito Abogado en Cancún, Necesito Abogado en Playa del Carmen, Abogado en Playa del Carmen, Abogado Penal en Cancún, Despido, Despido Injustificado, Mediación, Tenencia, Guarda, Guarda Compartida, Separación Legal, Abogado Defensor">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://consorciodeabogados.com.mx/" />
+    <meta property="og:title" content="
+      Asesoría y Representación Legal de Excelencia
+    " />
+    <meta property="og:description"
+        content="En Consorcio de Abogados te ofrecemos asesoría y representación legal de calidad. 
+        Somos especalistas en Derecho Familiar, Derecho Civil, Derecho Laboral y Derecho Penal" />
+    <meta property="og:image" content="https://consorciodeabogados.com.mx/static/img/hhback6.jpg" />
+    <meta name="google-site-verification" content="9rq7oTZLleDc78aV7zYZLeHGNvScctupzVMoZaKuW2k" />
     
 </head>
 <body>
@@ -336,7 +352,11 @@
             <div class="form">
 
                 <h3>Escribe tu consulta o agenda una cita:</h3>
-        <form action="action.php" autocomplete="off">
+            <form id="contact-form" action="https://formsubmit.co/3e47d910db6a29e8e426827f856a13c3" method="post">
+                <input type="hidden" name="_captcha" value="false"> 
+                <input type="hidden" name="_next" value="https://consorciodeabogados.com.mx/gracias.html">
+                <input type="hidden" name="_subject" value="Nueva consulta desde la página!">
+                <input type="hidden" name="_template" value="table">
             <div class="input">
                 <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" class="fnombre"autocomplete="off" required>
@@ -353,7 +373,7 @@
             </div>
             <div class="input ftext">
                 <label for="consulta">¿En qué podemos ayudarte?</label>
-                <textarea name="" id="" cols="30" rows="5" required></textarea>
+                <textarea name="Mensaje" id="" cols="30" rows="5" required></textarea>
             </div>
             <input class="btn" type="submit" value="ENVIAR">
         </form>
